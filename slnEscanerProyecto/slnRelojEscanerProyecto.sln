@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "appEscanerProyecto", "appEscanerProyecto\appEscanerProyecto.csproj", "{F2DC0F86-9D79-46A9-9698-DF5E4E400B07}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "appRelojEscanerProyecto", "appEscanerProyecto\appRelojEscanerProyecto.csproj", "{F2DC0F86-9D79-46A9-9698-DF5E4E400B07}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
