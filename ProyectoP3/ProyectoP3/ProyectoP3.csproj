@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4B570D49-EE93-4049-9457-569DE247D419}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProyectoP3</RootNamespace>
+    <AssemblyName>ProyectoP3</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Datos\AccesoDatos.cs" />
+    <Compile Include="Datos\AccesoDatosOracle.cs" />
+    <Compile Include="Datos\DeduccionesD.cs" />
+    <Compile Include="Datos\DepartamentoD.cs" />
+    <Compile Include="Datos\DiasPagoDobleD.cs" />
+    <Compile Include="Datos\EmpleadoD.cs" />
+    <Compile Include="Datos\HorarioD.cs" />
+    <Compile Include="Datos\MarcaD.cs" />
+    <Compile Include="Datos\PagoD.cs" />
+    <Compile Include="Datos\UnificacionD.cs" />
+    <Compile Include="Datos\UsuarioD.cs" />
+    <Compile Include="GUI\frmEdicionMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmEdicionMarca.designer.cs">
+      <DependentUpon>frmEdicionMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmEdicionDeducciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmEdicionDeducciones.designer.cs">
+      <DependentUpon>frmEdicionDeducciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmEdicionDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmEdicionDepartamento.designer.cs">
+      <DependentUpon>frmEdicionDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmEdicionDiasPagoDoble.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmEdicionDiasPagoDoble.designer.cs">
+      <DependentUpon>frmEdicionDiasPagoDoble.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmEdicionEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmEdicionEmpleado.designer.cs">
+      <DependentUpon>frmEdicionEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmEdicionHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmEdicionHorario.designer.cs">
+      <DependentUpon>frmEdicionHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmEdicionPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmEdicionPago.designer.cs">
+      <DependentUpon>frmEdicionPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmEdicionUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmEdicionUsuario.designer.cs">
+      <DependentUpon>frmEdicionUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmMantDeducciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmMantDeducciones.designer.cs">
+      <DependentUpon>frmMantDeducciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmMantDepartamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmMantDepartamento.designer.cs">
+      <DependentUpon>frmMantDepartamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmMantDiasPagoDoble.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmMantDiasPagoDoble.designer.cs">
+      <DependentUpon>frmMantDiasPagoDoble.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmMantEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmMantEmpleado.designer.cs">
+      <DependentUpon>frmMantEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmMantHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmMantHorario.designer.cs">
+      <DependentUpon>frmMantHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmMantPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmMantPago.designer.cs">
+      <DependentUpon>frmMantPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmMantUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmMantUsuario.designer.cs">
+      <DependentUpon>frmMantUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\LogIn.designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Mantenimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Mantenimientos.designer.cs">
+      <DependentUpon>Mantenimientos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmMantMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmMantMarca.designer.cs">
+      <DependentUpon>frmMantMarca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Principal.designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lógica\DeduccionesL.cs" />
+    <Compile Include="Lógica\DepartamentoL.cs" />
+    <Compile Include="Lógica\DiasPagoDobleL.cs" />
+    <Compile Include="Lógica\EmpleadoL.cs" />
+    <Compile Include="Lógica\HorarioL.cs" />
+    <Compile Include="Lógica\MarcaL.cs" />
+    <Compile Include="Lógica\PagoL.cs" />
+    <Compile Include="Lógica\UnificacionL.cs" />
+    <Compile Include="Lógica\UsuarioL.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frmEdicionMarca.resx">
+      <DependentUpon>frmEdicionMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmEdicionDeducciones.resx">
+      <DependentUpon>frmEdicionDeducciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmEdicionDepartamento.resx">
+      <DependentUpon>frmEdicionDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmEdicionDiasPagoDoble.resx">
+      <DependentUpon>frmEdicionDiasPagoDoble.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmEdicionEmpleado.resx">
+      <DependentUpon>frmEdicionEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmEdicionHorario.resx">
+      <DependentUpon>frmEdicionHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmEdicionPago.resx">
+      <DependentUpon>frmEdicionPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmEdicionUsuario.resx">
+      <DependentUpon>frmEdicionUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmMantDeducciones.resx">
+      <DependentUpon>frmMantDeducciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmMantDepartamento.resx">
+      <DependentUpon>frmMantDepartamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmMantDiasPagoDoble.resx">
+      <DependentUpon>frmMantDiasPagoDoble.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmMantEmpleado.resx">
+      <DependentUpon>frmMantEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmMantHorario.resx">
+      <DependentUpon>frmMantHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmMantPago.resx">
+      <DependentUpon>frmMantPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmMantUsuario.resx">
+      <DependentUpon>frmMantUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Mantenimientos.resx">
+      <DependentUpon>Mantenimientos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmMantMarca.resx">
+      <DependentUpon>frmMantMarca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
