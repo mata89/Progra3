@@ -8,7 +8,6 @@ namespace Lógica
 {
     public class EmpleadoL
     {
-
         private string id_empleado;
         private string id_departamento;
         private string nombre_empleado;
@@ -23,7 +22,7 @@ namespace Lógica
         private string modificado_por;
         private DateTime fecha_modificacion;
 
-        public EmpleadoL(string pId_empleado, string pId_departamento, string pNombre_empleado, string pApellido_1, string pApellido_2, string pGenero, 
+        public EmpleadoL(string pId_empleado, string pId_departamento, string pNombre_empleado, string pApellido_1, string pApellido_2, string pGenero,
                          string pDireccion, double pSalario, string pActivo,
                          string pCreado_por, DateTime pFecha_creacion, string pModificado_por, DateTime pFecha_modificacion)
         {
@@ -43,15 +42,15 @@ namespace Lógica
         }
 
 
-        public  string toString()
+        public string toString()
         {
             return ("N° Identificación: " + this.id_empleado +
                 " Código de departamento: " + this.id_departamento +
-                " Nombre Completo: " + this.nombre_empleado +" "+ this.apellido_1 +" "+ this.apellido_2 +
+                " Nombre Completo: " + this.nombre_empleado + " " + this.apellido_1 + " " + this.apellido_2 +
                 " Genero: " + this.genero +
                 " Dirección: " + this.direccion +
                 " Salario por hora: " + this.salario_por_hora +
-                " Activo: " + this.activo 
+                " Activo: " + this.activo
                 );
         }
 
@@ -120,5 +119,6 @@ namespace Lógica
             set { fecha_modificacion = value; }
         }
         #endregion
+
     }
 }

@@ -35,13 +35,12 @@
             this.lblSaludo = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // lblHora
             // 
             this.lblHora.Font = new System.Drawing.Font("Franklin Gothic Demi", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHora.ForeColor = System.Drawing.Color.Green;
+            this.lblHora.ForeColor = System.Drawing.Color.LimeGreen;
             this.lblHora.Location = new System.Drawing.Point(52, 79);
             this.lblHora.Name = "lblHora";
             this.lblHora.Size = new System.Drawing.Size(208, 44);
@@ -52,9 +51,12 @@
             // 
             // txtIdEmpleado
             // 
+            this.txtIdEmpleado.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.txtIdEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIdEmpleado.ForeColor = System.Drawing.Color.White;
             this.txtIdEmpleado.Location = new System.Drawing.Point(52, 150);
             this.txtIdEmpleado.Name = "txtIdEmpleado";
-            this.txtIdEmpleado.Size = new System.Drawing.Size(208, 20);
+            this.txtIdEmpleado.Size = new System.Drawing.Size(208, 13);
             this.txtIdEmpleado.TabIndex = 1;
             this.txtIdEmpleado.TextChanged += new System.EventHandler(this.txtIdEmpleado_TextChanged);
             this.txtIdEmpleado.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
@@ -62,6 +64,7 @@
             // lblCodigoEmpleado
             // 
             this.lblCodigoEmpleado.AllowDrop = true;
+            this.lblCodigoEmpleado.ForeColor = System.Drawing.Color.Yellow;
             this.lblCodigoEmpleado.Location = new System.Drawing.Point(52, 127);
             this.lblCodigoEmpleado.Name = "lblCodigoEmpleado";
             this.lblCodigoEmpleado.Size = new System.Drawing.Size(208, 20);
@@ -71,7 +74,9 @@
             // 
             // lblSaludo
             // 
+            this.lblSaludo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.lblSaludo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaludo.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.lblSaludo.Location = new System.Drawing.Point(12, 26);
             this.lblSaludo.Name = "lblSaludo";
             this.lblSaludo.Size = new System.Drawing.Size(283, 35);
@@ -83,7 +88,7 @@
             // lblFecha
             // 
             this.lblFecha.Font = new System.Drawing.Font("Franklin Gothic Demi", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFecha.ForeColor = System.Drawing.Color.Green;
+            this.lblFecha.ForeColor = System.Drawing.Color.LawnGreen;
             this.lblFecha.Location = new System.Drawing.Point(106, 182);
             this.lblFecha.Name = "lblFecha";
             this.lblFecha.Size = new System.Drawing.Size(102, 20);
@@ -98,23 +103,25 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // timer2
-            // 
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
             // frmRelojMarcador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(307, 223);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblSaludo);
             this.Controls.Add(this.lblCodigoEmpleado);
             this.Controls.Add(this.txtIdEmpleado);
             this.Controls.Add(this.lblHora);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRelojMarcador";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reloj Marcador";
+            this.TransparencyKey = System.Drawing.SystemColors.Control;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -129,7 +136,6 @@
         private System.Windows.Forms.Label lblSaludo;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer2;
     }
 }
 

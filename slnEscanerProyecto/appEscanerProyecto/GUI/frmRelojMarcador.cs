@@ -18,18 +18,7 @@ namespace GUI
         public frmRelojMarcador(AccesoDatosOracle pConexion)
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
+            conexion = pConexion;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -46,52 +35,47 @@ namespace GUI
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
-
                 this.conexion.iniciarTransaccion();
 
-                FacturaD oFacturaD = new FacturaD(this.conexion);
-                string numero = oFacturaD.agregarFactura(this.factura);
-                if (oFacturaD.Error)
+                if (txtIdEmpleado.Text != "")
                 {
-                    this.conexion.rollbackTransaccion();
-                    MessageBox.Show("Error, detalle:" + oFacturaD.ErrorDescription);
-                    return;
-                }
-
-                this.factura.Numero = Int32.Parse(numero);
-                FacturaDetalleD oDetalle = new FacturaDetalleD(this.conexion);
-                for (int i = 0; i < this.factura.obtenerDetalle().Count; i++)
-                {
-                    oDetalle.agregarDetalle(this.factura.obtenerDetalle()[i]);
-                    if (oDetalle.Error)
+                    string mensaje = "";
+                    MarcaD oMarcaD = new MarcaD(this.conexion, txtIdEmpleado.Text);
+                    mensaje = oMarcaD.Marcar();
+                    if (oMarcaD.Error == false)
                     {
-                        this.conexion.rollbackTransaccion();
-                        MessageBox.Show("Error, detalle:" + oDetalle.ErrorDescription);
-                        return;
+                        MessageBox.Show("Error al ingreasar marca");
+                        frmMensaje msj = new frmMensaje(false, mensaje);
+                        msj.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Marca registrada");
+                        frmMensaje msj = new frmMensaje(true, mensaje);
+                        msj.ShowDialog();
                     }
                 }
-
-                this.conexion.commitTransaccion();
-
-                if ((this.txtIdEmpleado.Text != ""))
-                {
-                    //this.conexion.iniciarTransaccion();
-
-
-                    //this.conexion.commitTransaccion();
-                    
-                    MessageBox.Show("It's OK!");
-                   
-                    
-                }
                 else
-                { 
-                    MessageBox.Show("Error al generar Marca","",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                {
+                    //MessageBox.Show("No ingreso id");
+                    //frmMensaje msj = new frmMensaje(true, "No ingreso ningun ID");
+                    //msj.ShowDialog();
                 }
-
-                
+                this.txtIdEmpleado.Text = "";
             }
+        }
+
+        #region eventos
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void txtIdEmpleado_TextChanged(object sender, EventArgs e)
@@ -108,7 +92,7 @@ namespace GUI
         {
 
         }
-
+        #endregion
 
     }
 }

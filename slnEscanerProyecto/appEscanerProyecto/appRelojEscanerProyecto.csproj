@@ -48,15 +48,25 @@
     <Compile Include="Datos\AccesoDatos.cs" />
     <Compile Include="Datos\AccesoDatosOracle.cs" />
     <Compile Include="Datos\MarcaD.cs" />
+    <Compile Include="GUI\frmMensaje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmMensaje.Designer.cs">
+      <DependentUpon>frmMensaje.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmRelojMarcador.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frmRelojMarcador.Designer.cs">
       <DependentUpon>frmRelojMarcador.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logica\EmpleadoL.cs" />
     <Compile Include="Logica\MarcaL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frmMensaje.resx">
+      <DependentUpon>frmMensaje.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmRelojMarcador.resx">
       <DependentUpon>frmRelojMarcador.cs</DependentUpon>
     </EmbeddedResource>
